@@ -1,0 +1,23 @@
+.webdev-bg {
+    position: relative;
+    height: 100vh;
+    background-image: url("../assets/grn-trees-red.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.webdev-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Change the alpha value to control transparency */
+    opacity: 0;
+    transition: opacity 0.5s; /* Adjust the transition duration as needed */
+}
+
+.webdev-bg:hover::before {
+    opacity: 1;
+}
