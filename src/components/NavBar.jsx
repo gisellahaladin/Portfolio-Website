@@ -1,8 +1,14 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
+    const [showNav, setShowNav] = useState(false);
+
+    const toggleNav = () => {
+        setShowNav(!showNav);
+    };
+
     useEffect(() => {
         let style1 = document.createElement("style");
         let style2 = document.createElement("style");
@@ -35,6 +41,12 @@ const NavBar = () => {
             "glitch-anim-1 2.5s infinite linear alternate-reverse";
         before.style.animation =
             "glitch-anim-2 3s infinite linear alternate-reverse";
+
+        // return () => {
+        //     // Remove the animation styles when the component unmounts
+        //     document.getElementById("after-te1").innerHTML = "";
+        //     document.getElementById("before-te1").innerHTML = "";
+        // };
     }, []);
 
     return (
@@ -69,7 +81,20 @@ const NavBar = () => {
                 </h1>
             </div>
             <nav className="flex-grow h-16 m-6">
-                <ul className="flex flex-row align-right justify-end space-x-6 text-xl text-stone-100 p-6 font-primary">
+                {/* Hamburger menu button */}
+                <button
+                    className="lg:hidden text-stone-100 text-6xl"
+                    onClick={toggleNav}
+                >
+                    &#9776;
+                </button>
+
+                <ul
+                    className={`lg:flex flex-row align-right justify-end space-x-6 text-xl text-stone-100 p-6 font-primary ${
+                        showNav ? "block" : "hidden"
+                    }`}
+                >
+                    {/* <ul className="flex flex-row align-right justify-end space-x-6 text-xl text-stone-100 p-6 font-primary"> */}
                     <li className="hover:text-transparent bg-clip-text bg-gradient-to-br from-rose-900 via-cyan-500 to-red-600 transition duration-350 ease-in-out">
                         <NavLink to="/">{"// Home //"}</NavLink>
                     </li>

@@ -1,5 +1,5 @@
 import Background from "../assets/grn-trees-red.jpg";
-import Headshot from "../assets/headshot2.jpg";
+import Headshot from "../assets/headshot-neu.jpg";
 
 const About = () => {
     return (
@@ -22,11 +22,11 @@ const About = () => {
                         />
 
                         <p className="text-stone-100 font-primary2 p-8 font-semi-bold text-2xl text-center max-w-xl">
-                            Hi, I'm Gisella Haladin! <br />
+                            Hi, I`&apos;`m Gisella Haladin! <br />
                             <br />
-                            I'm a Full-Stack Web and App Developer, Graphic
-                            Designer, UX/UI Designer and Illustrator currently
-                            living in Germany.
+                            I`&apos;`m a Full-Stack Web and App Developer,
+                            Graphic Designer, UX/UI Designer and Illustrator
+                            currently living in Germany.
                             <br />
                             <br />
                             Please contact me through{" "}

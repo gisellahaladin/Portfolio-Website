@@ -10,7 +10,7 @@ const App = () => {
             className="bg-fixed"
             style={{
                 backgroundImage: `url(${Background})`,
-                backgroundAttachment: "fixed", // This makes the background fixed
+                backgroundAttachment: "fixed",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: "100vh",
